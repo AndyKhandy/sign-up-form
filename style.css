@@ -36,7 +36,8 @@ body {
 h1 {
     font-family: "Sriracha";
     color: rgba(255, 255, 255, 0.708);
-    text-shadow: 3px 3px #3256b9;
+    text-shadow: 3px 3px #2b4fb3;
+    text-transform: uppercase;
 }
 
 img {
@@ -48,7 +49,7 @@ img {
 .sidebar-text {
     display: flex;
     position: absolute;
-    top: 20%;
+    top: 17%;
     width: 100%;
     padding: 5px;
     justify-content: center;
@@ -77,44 +78,79 @@ main {
     flex-grow: 1;
     background-color: rgba(230, 228, 228, 0.177);
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     font-size: 1.4rem;
     font-weight: bolder;
 }
 
-.quote p {
-    margin-left: 30px;
-    width: 80%;
+.quote .box {
+    width: 90%;
+    padding: 30px;
+    border: 12px double var(--main-color);
+    outline: yellow;
 }
 
-.quote p:first-of-type{
-    margin-top: 50px;
+.quote .box p:last-of-type{
+    margin-top: 20px;
+     font-size: clamp(13px, 1.3vw ,1.3rem);
 }
+
+.reasons {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reasons li {
+    font-family: "Sriracha";
+    color: var(--main-color);
+     font-size: clamp(13px, 1.3vw ,1.3rem);
+}
+
+.reasons li::marker{
+    content: "🏹 ";
+    color: var(--main-color);
+}
+
+.reasons h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 200px;
+    text-align: center;
+    font-size: clamp(1rem,2.5vw , 2rem);
+}
+
+
+
+
 /*PARAGRAPH SECTION END*/
 
 /*FORM SECTION*/
 .user-form{
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 legend {
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     margin-top: 10px;
     color: var(--main-color);
 }
 
 form {
-    height: 300px;
-    padding: 10px 0px 20px 30px;
+    height: 350px;
+    padding: 10px 0px 30px 30px;
     width: 100%;
     box-shadow: 0 3px 8px -6px black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
+    
 }
 
 .text-inputs-section{
@@ -137,7 +173,14 @@ form {
 
 .text-inputs-section input {
     width: 100%;
-    padding: 2px;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.text-inputs-section input[type="text"]::placeholder {
+    text-transform: uppercase;
 }
 
 input[type]:focus {
@@ -146,6 +189,10 @@ input[type]:focus {
 
 input[type]:valid {
     outline: 2px solid rgb(37, 173, 123)
+}
+
+input:user-invalid {
+    outline: 2px solid red;
 }
 
 button {
@@ -160,6 +207,7 @@ button {
 
 button:hover{
     transform: scale(1.05);
+    background-color: rgb(38, 96, 130)
 }
 
 #account {
@@ -172,5 +220,72 @@ button:hover{
     color: var(--main-color);
 }
 
+#account a:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1080px)
+{
+    .reasons {
+        display: block;
+    }
+
+    .quote .box {
+        width: 60%;
+    }
+    
+    .reasons h2 {
+        font-size: 20px;
+        text-align: left;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sidebar{
+         background-position: center;
+    }
+}
+
+@media screen and (max-width: 780px)
+{
+    body{
+        display: block;
+        height: 120vh;
+    }
+
+    .sidebar {
+        height: 400px;
+    }
+
+    .sidebar-text {
+        top: 0px;
+    }
+
+    .quote {
+        padding: 10px;
+        
+    }
+
+    .quote .box {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .quote .box p:last-child{
+        width: 100%;
+        text-align: center;
+    }
+
+    .quote .reasons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .quote .box h2 {
+        font-size: 20px;
+        max-width: 130px;
+    }
+
+}
 
 
