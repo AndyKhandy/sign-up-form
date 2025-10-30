@@ -18,10 +18,9 @@
     margin: 0;
 }
 
-
-body {
-    height: 100vh;
+.signup {
     display: flex;
+    height: 100vh;
 }
 
 /*SIDE BAR*/
@@ -65,7 +64,6 @@ img {
 /*END SIDEBAR SECTION*/
 
 main {
-    min-width: 500px;
     flex: 1;
     flex-grow: 4;
     display: flex;
@@ -80,7 +78,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     font-size: 1.4rem;
     font-weight: bolder;
 }
@@ -94,7 +91,7 @@ main {
 
 .quote .box p:last-of-type{
     margin-top: 20px;
-     font-size: clamp(13px, 1.3vw ,1.3rem);
+     font-size: clamp(15px, 1.3vw ,1.1rem);
 }
 
 .reasons {
@@ -109,7 +106,7 @@ main {
 .reasons li {
     font-family: "Sriracha";
     color: var(--main-color);
-     font-size: clamp(13px, 1.3vw ,1.3rem);
+     font-size: clamp(15px, 1.3vw ,1.3rem);
 }
 
 .reasons li::marker{
@@ -224,21 +221,52 @@ button:hover{
     opacity: 0.7;
 }
 
+@media screen and (min-width: 1500px)
+{
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signup{
+        max-width: 1500px;
+        margin: auto;
+        border: 10px double var(--form-color);
+        border-radius: 2px;
+        padding: 10px;
+    }
+
+    .sidebar {
+        outline: 5px solid var(--main-color);
+    }
+
+}
+
 @media screen and (max-width: 1080px)
 {
     .reasons {
-        display: block;
+        flex-direction: column;
     }
 
     .quote .box {
-        width: 60%;
+        width: 70%;
+    }
+    
+    .quote .box .reasons {
+        align-items: center;
+        justify-content: center;
     }
     
     .reasons h2 {
         font-size: 20px;
-        text-align: left;
+        text-align: center;
         max-width: 100%;
         margin-bottom: 20px;
+    }
+
+    .box p {
+        text-align: center;
     }
 
     .sidebar{
@@ -248,7 +276,7 @@ button:hover{
 
 @media screen and (max-width: 780px)
 {
-    body{
+    .signup{
         display: block;
         height: 120vh;
     }
@@ -279,13 +307,40 @@ button:hover{
     .quote .reasons {
         display: flex;
         flex-direction: row;
+        gap: 30px;
     }
 
     .quote .box h2 {
-        font-size: 20px;
+        font-size: clamp(10px, 0.3rem + 2vw, 20px);
         max-width: 130px;
     }
 
+
+}
+
+@media screen and (max-width: 700px)
+{
+    .quote .reasons {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .reasons li {
+        font-size: clamp(10px, 0.3rem + 1.5vw, 15px);
+    }
+
+    .quote .reasons h2 {
+        max-width: none;
+    }
+
+    .sidebar {
+        flex: 0;
+        width: 100%;
+    }
+
+    .text-inputs-section label {
+        font-size: 12px;
+    }
 }
 
 
