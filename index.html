@@ -16,17 +16,56 @@
 
     <main>
         <div class="quote">
-
+            <p>Archery is a fun sport whether you are a beginner or an expert. You know you need something like this in your life to help you realize your deppest dreams. Sign up now to get started at UTA's Archery club
+            </p>
+            <p>You know you want to.</p>
         </div>
 
         <div class="user-form">
-            <div class="text-inputs">
+            <form action="POST">
+                <legend>Let's do this!</legend>
+            <div class="text-inputs-section">
+
+                <div class="first-nameS">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John" minlength="3" maxlength="10" required>
+                </div>
+
+                <div class="last-nameS">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Doe" required minlength="2" maxlength="10">
+                </div>
+
+                <div class="emailS">
+                    <label for="email">Email</label>
+                    <input type="email" id="emailInput" name="email" required>
+                </div>
+
+                <div class="phoneS">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+
+                <div class="passwordS">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="passwordRS">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
 
             </div>
 
-            <div class="submit">
-
+            <div class="submit-section">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? Log in</p>
             </div>
+
+
+            </form>
         </div>
 
     </main>
