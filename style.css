@@ -18,6 +18,10 @@
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 .signup {
     display: flex;
     height: 100vh;
@@ -27,9 +31,18 @@
 .sidebar{
     background-image: url("img/archeryBackground.jpg");
     background-size: cover;
+    background-position: center;
     flex: 1;
     flex-grow: 2.5;
     position: relative;
+}
+
+.sidebar i {
+    position: relative;
+    top: 2px;
+    font-size: 25px;
+    color: rgb(240, 240, 244);
+    cursor: pointer;
 }
 
 h1 {
@@ -53,7 +66,7 @@ img {
     padding: 5px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     font-size: clamp(10px, 0.25rem + 0.8vw ,50px);
     background-color: rgba(34, 106, 184, 0.74);
 }
@@ -91,7 +104,7 @@ main {
 
 .quote .box p:last-of-type{
     margin-top: 20px;
-     font-size: clamp(15px, 1.3vw ,1.1rem);
+    font-size: clamp(15px, 1.3vw ,1rem);
 }
 
 .reasons {
@@ -103,10 +116,20 @@ main {
     align-items: center;
 }
 
+.reasons ul:hover > li {
+    opacity: 0.5;
+}
+
+.reasons ul:hover > li:hover{
+    opacity: 1;
+}
+
 .reasons li {
+    transition: 200ms ease-in;
+    cursor:pointer;
     font-family: "Sriracha";
     color: var(--main-color);
-     font-size: clamp(15px, 1.3vw ,1.3rem);
+     font-size: clamp(15px, 1.3vw ,1rem);
 }
 
 .reasons li::marker{
@@ -115,14 +138,11 @@ main {
 }
 
 .reasons h2 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 200px;
     text-align: center;
     font-size: clamp(1rem,2.5vw , 2rem);
 }
-
-
-
 
 /*PARAGRAPH SECTION END*/
 
@@ -181,11 +201,11 @@ form {
 }
 
 input[type]:focus {
-    outline: 2px solid var(--main-color);
+   outline: 3px solid var(--main-color);
 }
 
 input[type]:valid {
-    outline: 2px solid rgb(37, 173, 123)
+    outline: 3px solid rgb(37, 173, 123);
 }
 
 input:user-invalid {
@@ -208,12 +228,11 @@ button:hover{
 }
 
 #account {
-    margin: 20px;
+    margin: 35px 20px;
     font-size: 1.2rem;
 }
 
 #account a {
-    text-decoration: none;
     color: var(--main-color);
 }
 
@@ -268,10 +287,6 @@ button:hover{
     .box p {
         text-align: center;
     }
-
-    .sidebar{
-         background-position: center;
-    }
 }
 
 @media screen and (max-width: 780px)
@@ -291,7 +306,6 @@ button:hover{
 
     .quote {
         padding: 10px;
-        
     }
 
     .quote .box {
@@ -307,7 +321,7 @@ button:hover{
     .quote .reasons {
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        gap: 40px;
     }
 
     .quote .box h2 {
@@ -326,7 +340,7 @@ button:hover{
     }
 
     .reasons li {
-        font-size: clamp(10px, 0.3rem + 1.5vw, 15px);
+        font-size: clamp(12px, 0.3rem + 1.5vw, 15px);
     }
 
     .quote .reasons h2 {
