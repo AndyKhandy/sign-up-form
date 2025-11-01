@@ -71,6 +71,18 @@ img {
     background-color: rgba(34, 106, 184, 0.74);
 }
 
+#credit {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    bottom: 15px;
+    right:20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 .sidebar-text img {
     flex-shrink: 0;
 }
