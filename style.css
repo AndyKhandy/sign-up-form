@@ -79,7 +79,8 @@ img {
     right:20px;
 }
 
-.underline {
+#credit a {
+    color: white;
     text-decoration: underline;
 }
 
