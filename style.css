@@ -67,7 +67,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    font-size: clamp(10px, 0.25rem + 0.8vw ,50px);
+    font-size: clamp(10px, 0.25rem + 0.8vw ,20px);
     background-color: rgba(34, 106, 184, 0.74);
 }
 
@@ -117,7 +117,7 @@ main {
 
 .quote .box p:last-of-type{
     margin-top: 20px;
-    font-size: clamp(15px, 1.3vw ,1rem);
+    font-size: clamp(15px, 1.3vw ,25px);
 }
 
 .reasons {
@@ -142,7 +142,7 @@ main {
     cursor:pointer;
     font-family: "Sriracha";
     color: var(--main-color);
-     font-size: clamp(15px, 1.3vw ,1rem);
+     font-size: clamp(15px, 1.3vw ,20px);
 }
 
 .reasons li::marker{
@@ -154,7 +154,7 @@ main {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 200px;
     text-align: center;
-    font-size: clamp(1rem,2.5vw , 2rem);
+    font-size: clamp(1rem,2.5vw , 30px);
 }
 
 /*PARAGRAPH SECTION END*/
@@ -271,6 +271,10 @@ button:hover{
 
     .sidebar {
         outline: 5px solid var(--main-color);
+    }
+
+    .reasons ul {
+        margin-left: 5px;
     }
 
 }
